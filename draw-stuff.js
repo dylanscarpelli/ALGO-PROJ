@@ -3,21 +3,71 @@
 // ------------------------------------------------------------
 
 // FUN. Draw filled rect.
-function draw_rect( ctx, stroke, fill ) 
+
+function draw_cell(ctx, x, y)
 {
-    for(let i = 0; i < 10; i++ )
-    {
-    stroke = stroke || 'lightgrey';
-    fill = fill || 'dimgrey';
-    ctx.save( );
+    var stroke = 'blue';
+    var fill = 'green';
+    ctx.save();
     ctx.strokeStyle = stroke;
     ctx.fillStyle = fill;
-    ctx.lineWidth = 5;
-    ctx.rect(i, i, i+4,i+4);
-    ctx.stroke();
+        
+    width = cavas.width - 210;
+    ctx.rect(x,y,8.5, 8.5);
     ctx.fill();
-    ctx.restore( );
+    ctx.restore();
+}
+
+function drawArray (ctx, arr)
+{
+    var localx = 70;
+    var arrayLength = arr.length;
+    for(var i=0; i < arrayLength; i++)
+    {
+        if(arr[i] === 1)
+    {
+        draw_cell(ctx, localX, globalY );
     }
+    }
+}
+
+
+
+
+
+
+
+function draw_rect( ctx, stroke, fill ) 
+{
+        for(let i = 0; i < 20; i++)
+        {
+            for(let j = 0; j <100; j++)
+            {
+            stroke = stroke || 'lightgrey';
+            fill = fill || 'green';
+            ctx.save( );
+            ctx.strokeStyle = stroke;
+            ctx.fillStyle = fill;
+            ctx.lineWidth = 5;
+            ctx.rect(i, j, 8,8);
+            ctx.stroke();
+            ctx.fill();
+            ctx.restore( );
+            }
+        }
+        // for(let i = 0; i < 100; i++)
+        // {
+        // stroke = stroke || 'lightgrey';
+        // fill = fill || 'white';
+        // ctx.save( );
+        // ctx.strokeStyle = stroke;
+        // ctx.fillStyle = fill;
+        // ctx.lineWidth = 5;
+        // ctx.rect(1, i, 8,8);
+        // ctx.stroke();
+        // ctx.fill();
+        // ctx.restore( );
+        // }
 }
 
 // =====================================================  draw_grid ====
