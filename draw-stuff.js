@@ -31,43 +31,37 @@ function drawArray (ctx, arr)
     }
 }
 
-
-
-
-
-
-
 function draw_rect( ctx, stroke, fill ) 
 {
-        for(let i = 0; i < 20; i++)
+    for(let i = 0; i < 20; i++)
+    {
+        for(let j = 0; j <100; j++)
         {
-            for(let j = 0; j <100; j++)
-            {
-            stroke = stroke || 'lightgrey';
-            fill = fill || 'green';
-            ctx.save( );
-            ctx.strokeStyle = stroke;
-            ctx.fillStyle = fill;
-            ctx.lineWidth = 5;
-            ctx.rect(i, j, 8,8);
-            ctx.stroke();
-            ctx.fill();
-            ctx.restore( );
-            }
+        stroke = stroke || 'lightgrey';
+        fill = fill || 'green';
+        ctx.save( );
+        ctx.strokeStyle = stroke;
+        ctx.fillStyle = fill;
+        ctx.lineWidth = 5;
+        ctx.rect(i, j, 8,8);
+        ctx.stroke();
+        ctx.fill();
+        ctx.restore( );
         }
-        // for(let i = 0; i < 100; i++)
-        // {
-        // stroke = stroke || 'lightgrey';
-        // fill = fill || 'white';
-        // ctx.save( );
-        // ctx.strokeStyle = stroke;
-        // ctx.fillStyle = fill;
-        // ctx.lineWidth = 5;
-        // ctx.rect(1, i, 8,8);
-        // ctx.stroke();
-        // ctx.fill();
-        // ctx.restore( );
-        // }
+    }
+    // for(let i = 0; i < 100; i++)
+    // {
+    // stroke = stroke || 'lightgrey';
+    // fill = fill || 'white';
+    // ctx.save( );
+    // ctx.strokeStyle = stroke;
+    // ctx.fillStyle = fill;
+    // ctx.lineWidth = 5;
+    // ctx.rect(1, i, 8,8);
+    // ctx.stroke();
+    // ctx.fill();
+    // ctx.restore( );
+    // }
 }
 
 // =====================================================  draw_grid ====
